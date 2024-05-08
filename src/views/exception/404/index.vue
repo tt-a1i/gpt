@@ -1,9 +1,14 @@
 <script lang="ts" setup>
-import { NButton } from 'naive-ui'
-import { useRouter } from 'vue-router'
+import { NButton } from 'naive-ui' // 引入Naive UI的按钮组件
+import { useRouter } from 'vue-router' // 引入Vue Router的useRouter函数
 
+// 获取Vue Router实例
 const router = useRouter()
 
+/**
+ * 跳转到首页的函数。
+ * 该函数没有参数和返回值。
+ */
 function goHome() {
   router.push('/')
 }
@@ -23,6 +28,7 @@ function goHome() {
           <img src="../../../icons/404.svg" alt="404">
         </div>
       </div>
+      <!-- 设置返回首页的按钮 -->
       <NButton type="primary" @click="goHome">
         Go to Home
       </NButton>
